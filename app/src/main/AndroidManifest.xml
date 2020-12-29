@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lalith.androidwithkotlin">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/splashTheme">
+        <activity android:name=".webview"></activity>
+        <activity android:name=".gridview" />
+        <activity android:name=".listview" />
+        <activity android:name=".privacy" />
+        <activity android:name=".about" />
+        <activity android:name=".checkbox" />
+        <activity android:name=".spinner" />
+        <activity android:name=".radioButton" />
+        <activity android:name=".imageView" />
+        <activity android:name=".simple_notification" />
+        <activity android:name=".notification" />
+        <activity android:name=".container" />
+        <activity android:name=".datetime" />
+        <activity android:name=".alert_dialog" />
+        <activity android:name=".MainActivity2_intent" />
+        <activity android:name=".explicit_intent2" />
+        <activity android:name=".whatsapp_intent" />
+        <activity android:name=".emailkotlinfragment" />
+        <activity android:name=".email_intent" />
+        <activity android:name=".intentactivity1" />
+        <activity android:name=".explicit_intent1" />
+        <activity android:name=".intent" />
+        <activity android:name=".lifecycle" />
+        <activity android:name=".positioning_toast" />
+        <activity android:name=".custom_toast" />
+        <activity android:name=".simple_toast" />
+        <activity android:name=".toast" />
+        <activity android:name=".imageButton" />
+        <activity android:name=".button" />
+        <activity android:name=".EditText" />
+        <activity android:name=".textView" />
+        <activity android:name=".widget" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

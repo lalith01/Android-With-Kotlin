@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text="Date And Time ?"
+        android:id="@+id/btn_dt"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@color/blue"
+        android:textColor="@color/white"></Button>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date : DD : MM : YY"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:id="@+id/tv_dt"
+        android:layout_above="@+id/btn_dt"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"></TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time : Hrs : Mins"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:id="@+id/tv_time"
+        android:layout_above="@+id/tv_dt"
+        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"></TextView>
+
+</RelativeLayout>

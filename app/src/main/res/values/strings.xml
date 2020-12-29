@@ -1,0 +1,1284 @@
+<resources>
+    <string name="app_name">Android with kotlin</string>
+
+    <string name="selected_item">Selected item:</string>
+
+    <string-array name="Languages">
+        <item>Java</item>
+        <item>Kotlin</item>
+        <item>Swift</item>
+        <item>Python</item>
+        <item>Scala</item>
+        <item>Perl</item>
+    </string-array>
+
+    <string-array name="list">
+
+        <item>Hyderabad</item>
+        <item>Banglore</item>
+        <item>Mumbai</item>
+        <item>Pune</item>
+        <item>Delhi</item>
+        <item>Goa</item>
+        <item>Chennai</item>
+
+    </string-array>
+
+    <string name="string_lv">
+        &lt;string-array name="\"list"\"&gt;\n\n
+
+        \t\t&lt;item&gt;Hyderabad&lt;/item&gt;\n
+        \t\t&lt;item&gt;Banglore&lt;/item&gt;\n
+        \t\t&lt;item&gt;Mumbai&lt;/item&gt;\n
+        \t\t&lt;item&gt;Pune&lt;/item&gt;\n
+        \t\t&lt;item&gt;Delhi&lt;/item&gt;\n
+        \t\t&lt;item&gt;Goa&lt;/item&gt;\n
+        \t\t&lt;item&gt;Chennai&lt;/item&gt;\n\n
+
+    &lt;/string-array&gt;
+    </string>
+
+    <string name="string">
+        &lt;string name="\"selected_item"\"&gt;Selected item:&lt;/string&gt;\n\n
+        &lt;string-array name="\"Languages"\"&gt;\n\n
+            \t\t&lt;item&gt;Java&lt;/item&gt;\n
+            \t\t&lt;item&gt;Kotlin&lt;/item&gt;\n
+            \t\t&lt;item&gt;Swift&lt;/item&gt;\n
+            \t\t&lt;item&gt;Python&lt;/item&gt;\n
+            \t\t&lt;item&gt;Scala&lt;/item&gt;\n
+            \t\t&lt;item&gt;Perl&lt;/item&gt;\n\n
+        &lt;/string-array&gt;\n
+    </string>
+
+    <string name="TextView_xml">&lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt; \n\n&lt;RelativeLayout \nxmlns:android="\"http://schemas.android.com/apk/res/android"\" \nandroid:layout_width="\"match_parent"\"\nandroid:layout_height="match_parent"&gt;\n\n&lt;TextView\nandroid:layout_width="\"wrap_content"\"\nandroid:layout_height="\"wrap_content"\"\nandroid:textSize="\"30sp"\"\nandroid:textStyle="\"bold"\"\nandroid:textColor="\"#000"\"\nandroid:text="\"Kotlin With Android"\"\nandroid:layout_centerInParent="\"true"\"&gt;\n&lt;/TextView&gt;\n\n&lt;/RelativeLayout&gt;</string>
+    <string name="TextView_kotlin">import androidx.appcompat.app.AppCompatActivity\nimport android.os.Bundle \nimport android.widget.TextView\nimport android.widget.Toast \n\nclass MainActivity : AppCompatActivity()\n\n\t{\n\n\t\toverride fun onCreate(savedInstanceState: Bundle?)\n\n{\n\t\t\tsuper.onCreate(savedInstanceState) \n\t\t\tsetContentView(R.layout.activity_main)\n\n\t\t\t //accessing our textview from layout \n\t\t\t val textView = findViewById &lt;TextView&gt; (R.id.text_view_id) as TextView\n\t\t\t textView?.setOnClickListener{ Toast.makeText(this@MainActivity, "\"Kotlin With Android"\", Toast.LENGTH_LONG).show() }\n\n\t\t} \n\n\t}</string>
+
+    <string name="EditText_xml">&lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt; \n\n&lt;RelativeLayout xmlns:android="\"http://schemas.android.com/apk/res/android"\" \nandroid:layout_width="\"match_parent"\"\nandroid:layout_height="\"match_parent"\"\nxmlns:app="\"http://schemas.android.com/apk/res-auto"\"&gt;\n\n&lt;EditText\nandroid:id="\"@+id/editText"\" \nandroid:layout_width="\"match_parent"\" \nandroid:layout_height="\"wrap_content"\" \nandroid:inputType="\"text"\" \nandroid:hint="\"Hi Type Whatever Is In Your Mind"\" \nandroid:layout_margin="\"20dp"\" \nandroid:layout_centerInParent="\"true"\"&gt; \n&lt;/EditText&gt; \n\n&lt;/RelativeLayout&gt;</string>
+    <string name="EditText_koltin">import androidx.appcompat.app.AppCompatActivity\nimport android.os.Bundle\nimport android.widget.EditText\n\nclass MainActivity : AppCompatActivity()\n{\n\t override fun onCreate(savedInstanceState: Bundle?) \n\t \t {\n\t \t \t super.onCreate(savedInstanceState) \n\t\t\t setContentView(R.layout.activity_main) \n\t \t \t var editText : EditText = findViewById(R.id.editText) \n\t\t}\n}\n</string>
+
+    <string name="SimpleToast_xml">&lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt;\n\n&lt;RelativeLayout xmlns:android="\"http://schemas.android.com/apk/res/android"\"\n\txmlns:app="\"http://schemas.android.com/apk/res-auto"\"\n\t xmlns:tools="\"http://schemas.android.com/tools"\"\n\t android:layout_width="\"match_parent"\"\n\t android:layout_height="\"match_parent"\"\n\t tools:context="\".MainActivity"\"&gt; \n\n&lt;LinearLayout\n\t android:layout_width="\"match_parent"\"\n\t android:layout_height="\"wrap_content"\"\n\t android:layout_centerInParent="\"true"\"\n\t android:orientation="\"horizontal"\"\n\t android:layout_margin="\"10dp"\"&gt;\n\n&lt;Button\n\t android:layout_width="\"0dp"\"\n\t android:layout_height="\"wrap_content"\"\n\t android:layout_weight="\"0.5"\"\n\t android:id="\"@+id/button1"\"\n\t android:layout_margin="\"5dp"\"\n\t android:text="\"short toast"\"&gt;\n &lt;/Button&gt;\n\n&lt;Button\n\t android:layout_width="\"0dp"\"\n\t android:layout_height="\"wrap_content"\"\n\t android:layout_weight="\"0.5"\"\n\t android:id="\"@+id/button2"\"\n\t android:layout_margin="\"5dp"\" \n\t android:text="\"long toast"\"&gt; \n &lt;/Button&gt; \n\n&lt;/LinearLayout&gt; \n\n&lt;/RelativeLayout&gt;</string>
+    <string name="SimpleToast_kotlin">import androidx.appcompat.app.AppCompatActivity\nimport android.os.Bundle\nimport android.widget.EditText\nimport android.widget.Toast\nimport kotlinx.android.synthetic.main.activity_main.*\n\nclass MainActivity : AppCompatActivity()\n{\n\toverride fun onCreate(savedInstanceState: Bundle?)\n\t{\n\t\tsuper.onCreate(savedInstanceState)\n\t\tsetContentView(R.layout.activity_main)\n\n\t\tbutton1.setOnClickListener\n\t\t{ \n\t\t\tToast.makeText(this@MainActivity,"This is a short toast",Toast.LENGTH_SHORT).show()\n\t\t}\n\t\tbutton2.setOnClickListener\t\t{\n\t\t\tToast.makeText(this@MainActivity,"This is a long toast",Toast.LENGTH_LONG).show()\n\t\t}\n\t}\n}</string>
+    <string name="CustomToast_xml">&lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt;\n\n&lt;RelativeLayout xmlns:android="\"http://schemas.android.com/apk/res/android"\"\n\txmlns:app="\"http://schemas.android.com/apk/res-auto"\"\n\t xmlns:tools="\"http://schemas.android.com/tools"\"\n\t android:layout_width="\"match_parent"\"\n\t android:layout_height="\"match_parent"\"\n\t tools:context="\".MainActivity"\"&gt; \n\n &lt;Button&gt;\n\t android:layout_width="\"wrap_content"\"\n\t android:layout_height="\"wrap_content"\"\n\t android:id="\"@+id/button1"\"\n\t android:layout_margin="\"5dp"\"\n\t\tandroid:layout_centerInParent="\"true"\"\n\t android:text="\"custom toast"\"&gt;\n &lt;/Button&gt; \n\n&lt;/RelativeLayout&gt;</string>
+    <string name="CustomToast_kotlin">import androidx.appcompat.app.AppCompatActivity \n
+import android.os.Bundle\n
+import android.widget.Toast\n
+import kotlinx.android.synthetic.main.activity_main.*\n
+import kotlinx.android.synthetic.main.custom_toast_msg.*\n\n
+
+class MainActivity : AppCompatActivity() \n
+{\n
+    \toverride fun onCreate(savedInstanceState: Bundle?)\n
+    {\t\t\n
+        \t\t\tsuper.onCreate(savedInstanceState)\n
+        \t\t\tsetContentView(R.layout.activity_main)\n
+     \t\t\t   val layout = layoutInflater.inflate(R.layout.custom_toast_msg, toast)\n\n
+
+            \t\t\tbutton1.setOnClickListener{\n
+                \t\t\t Toast(this@MainActivity).apply{\n
+                    \t\t\t duration = Toast.LENGTH_SHORT \n
+                    \t\t\t view = layout\n
+                \t\t\t }.show()\n
+            \t\t\t }\n
+    \t\t}\n
+}
+</string>
+
+    <string name="custom_msg">
+        &lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt;\n\n
+&lt;RelativeLayout xmlns:android="\"http://schemas.android.com/apk/res/android"\"\n
+    \t\tandroid:id="\"@+id/toast"\"\n
+    \t\tandroid:layout_width="\"match_parent"\"\n
+    \t\tandroid:layout_height="\"match_parent"\"\n
+    \t\txmlns:app="\"http://schemas.android.com/apk/res-auto"\"&gt; \n\n
+
+    &lt;androidx.cardview.widget.CardView\n
+        \t\tandroid:layout_width="\"match_parent"\"\n
+        \t\tandroid:layout_height="\"70dp"\"\n
+        \t\tapp:cardBackgroundColor="\"@color/blue"\"\n
+        \t\tapp:cardCornerRadius="\"15dp"\"\n
+        \t\tandroid:layout_margin="\"20dp"\"\n
+        \t\tandroid:elevation="\"5dp"\"&gt; \n\n
+
+        &lt;RelativeLayout\n
+            \t\tandroid:layout_width="\"match_parent"\"\n
+            \t\tandroid:layout_height="\"match_parent"\"&gt; \n\n
+            &lt;ImageView\n
+                \t\tandroid:layout_width="\"30dp"\"\n
+                \t\tandroid:layout_height="\"30dp"\"\n
+                \t\tandroid:layout_centerVertical="\"true"\"\n
+                \t\tandroid:layout_marginLeft="\"10dp"\"\n
+                \t\tandroid:src="\"@drawable/logo"\"&gt;&lt;/ImageView&gt; \n\n
+
+            &lt;TextView\n
+                \t\tandroid:layout_width="\"wrap_content"\"\n
+                \t\tandroid:layout_height="\"wrap_content"\"\n
+                \t\tandroid:text="\"This is a custom Toast"\"\n
+                \t\tandroid:textSize="\"20dp"\"\n
+                \t\tandroid:textColor="\"#fff"\"\n
+                \t\tandroid:layout_centerInParent="\"true"\"\n
+                \t\tandroid:layout_gravity="\"center"\"&gt; \n &lt;/TextView&gt; \n\n
+        &lt;/RelativeLayout&gt; \n\n
+    &lt;/androidx.cardview.widget.CardView&gt; \n\n
+&lt;/RelativeLayout&gt;
+    </string>
+
+    <string name="PositionToast_xml">
+        &lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt;\n\n
+&lt;RelativeLayout xmlns:android="\"http://schemas.android.com/apk/res/android"\"\n
+    \t\txmlns:app="\"http://schemas.android.com/apk/res-auto"\"\n
+    \t\t xmlns:tools="\"http://schemas.android.com/tools"\"\n
+    \t\t android:layout_width="\"match_parent"\"\n
+    \t\t android:layout_height="\"match_parent"\"\n
+    \t\t tools:context="\".MainActivity"\"&gt; \n\n
+
+    &lt;Button\n
+        \t\t android:layout_width="\"100dp"\"\n
+        \t\t android:layout_height="\"wrap_content"\"\n
+        \t\t android:id="\"@+id/button1"\"\n
+        \t\t android:text="\"center"\"\n
+        \t\t android:layout_centerInParent="\"true"\"&gt; \n &lt;/Button&gt; \n\n
+
+    &lt;Button\n
+        \t\t android:layout_width="\"100dp"\"\n
+        \t\t android:layout_height="\"wrap_content"\"\n
+        \t\t android:id="\"@+id/button2"\"\n
+        \t\t android:text="\"top"\"\n
+        \t\t android:layout_centerHorizontal="\"true"\"\n
+        \t\t android:layout_above="\"@id/button1"\"\n
+        \t\t android:layout_marginBottom="\"50dp"\"&gt; \n &lt;/Button&gt; \n\n
+
+    &lt;Button\n
+        \t\t android:layout_width="\"100dp"\"\n
+        \t\t android:layout_height="\"wrap_content"\"\n
+        \t\t android:id="\"@+id/button3"\"\n
+        \t\t android:text="\"bottom"\"\n
+        \t\t android:layout_below="\"@+id/button1"\"\n
+        \t\t android:layout_marginTop="\"50dp"\"\n
+        \t\t android:layout_alignLeft="\"@+id/button1"\"&gt; \n &lt;/Button&gt; \n\n
+
+    &lt;Button\n
+        \t\t android:layout_width="\"100dp"\"\n
+        \t\t android:layout_height="\"wrap_content"\"\n
+        \t\t android:id="\"@+id/button4"\"\n
+        \t\t android:text="\"left"\"\n
+        \t\t android:layout_toLeftOf="\"@+id/button1"\"\n
+        \t\t android:layout_centerVertical="\"true"\"\n
+        \t\t android:layout_marginRight="\"50dp"\"&gt; \n &lt;/Button&gt; \n\n
+
+    &lt;Button\n
+        \t\t android:layout_width="\"100dp"\"\n
+        \t\t android:layout_height="\"wrap_content"\"\n
+        \t\t android:id="\"@+id/button5"\"\n
+        \t\t android:text="\"right"\"\n
+        \t\t android:layout_toRightOf="\"@+id/button1"\"\n
+        \t\t android:layout_centerVertical="\"true"\"\n
+        \t\t android:layout_marginLeft="\"50dp"\"&gt; \n &lt;/Button&gt; \n\n
+
+&lt;/RelativeLayout&gt;
+    </string>
+
+    <string name="PositionToast_kotlin">
+        import android.os.Bundle\n
+import android.view.Gravity\n
+import android.widget.Toast\n
+import androidx.appcompat.app.AppCompatActivity\n
+import kotlinx.android.synthetic.main.activity_main.* \n\n
+
+
+class MainActivity : AppCompatActivity()\n
+{\n
+    \t\toverride fun onCreate(savedInstanceState: Bundle?) \n
+    \t\t {\n
+        \t\tsuper.onCreate(savedInstanceState) \n
+        \t \t setContentView(R.layout.activity_main) \n\n
+
+        \t \t button1.setOnClickListener {\n
+            \t \t val toast = Toast.makeText(this@MainActivity, "CENTER", Toast.LENGTH_SHORT) \n
+           \t\t toast.setGravity(Gravity.CENTER, 0, 0) \n
+           \t\t toast.show()\n
+        \t \t }\n\n
+
+        \t \t button2.setOnClickListener {\n
+            \t \t val toast = Toast.makeText(this@MainActivity, " TOP", Toast.LENGTH_SHORT) \n
+            \t \t toast.setGravity(Gravity.TOP, 0, 250) \n
+            \t \t toast.show()\n
+        \t \t }\n\n
+
+        \t \t button3.setOnClickListener {\n
+            \t \t val toast = Toast.makeText(this@MainActivity, "BOTTOM", Toast.LENGTH_SHORT) \n
+            \t \t toast.setGravity(Gravity.BOTTOM, 0, 250) \n
+           \t\t toast.show()\n
+        \t \t }\n\n
+
+        \t \t button4.setOnClickListener {\n
+            \t \t val toast = Toast.makeText(this@MainActivity, "LEFT", Toast.LENGTH_SHORT) \n
+            \t \t toast.setGravity(Gravity.LEFT, 0, 250) \n
+            \t \t toast.show()\n
+        \t \t }\n\n
+
+        \t \t button5.setOnClickListener {\n
+            \t \t val toast = Toast.makeText(this@MainActivity, "RIGHT", Toast.LENGTH_SHORT) \n
+            \t \t toast.setGravity(Gravity.RIGHT, 0, 250) \n
+            \t \t toast.show()\n
+        \t \t }\t}\n
+}\n
+
+
+    </string>
+
+
+    <string name="lifecycle_xml">
+        &lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt; \n\n
+&lt;RelativeLayout xmlns:android="\"http://schemas.android.com/apk/res/android"\"\n
+   \t\t xmlns:app="\"http://schemas.android.com/apk/res-auto"\"\n
+    \t\t xmlns:tools="\"http://schemas.android.com/tools"\"\n
+   \t\t android:layout_width="\"match_parent"\"\n
+    \t\t android:layout_height="\"match_parent"\"\n
+    \t\t tools:context="\".MainActivity"\"&gt; \n\n
+
+    &lt;TextView\n
+        \t\t android:layout_width="\"wrap_content"\"\n
+        \t\t android:layout_height="\"wrap_content"\"\n
+       \t\t android:text="\"An Activity is a single focused thing that the user can see. Let’s see how the lifecycle of an Activity looks like, which functions are triggered when and why."\" \n
+       \t\t android:layout_centerInParent="\"true"\"\n
+       \t\t android:layout_margin="\"30dp"\"\n
+        \t\t android:textSize="\"20sp"\"\n
+       \t\t android:textStyle="\"bold"\"\n
+       \t\t android:lineSpacingExtra="\"3sp"\"\n
+       \t\t android:letterSpacing="\"0.1"\"\n
+       \t\t android:textColor="\"#000"\"&gt; \n &lt;/TextView&gt; \n\n
+
+&lt;/RelativeLayout&gt;
+
+    </string>
+
+    <string name="lifecycle_kotlin">
+        import android.os.Bundle\n
+import android.view.View\n
+import android.widget.TextView\n
+import android.widget.Toast\n
+import androidx.appcompat.app.AppCompatActivity\n\n
+
+
+class MainActivity : AppCompatActivity()\n
+{\n
+    override fun onCreate(savedInstanceState: Bundle?) \n
+    \t\t{\n
+        \t\t\tsuper.onCreate(savedInstanceState) \n
+        \t\t\t setContentView(R.layout.activity_main) \n\n
+
+        \t\t\t Toast.makeText(applicationContext, "\"onCreate invoked"\", Toast.LENGTH_SHORT).show()\n\n
+    \t\t}\n\n
+
+    override fun onStart() {\n
+        \t\t\t super.onStart()\n
+        \t\t\t Toast.makeText(applicationContext, "\"onStart invoked"\",  Toast.LENGTH_SHORT).show()\n
+    }\n\n
+
+    override fun onResume() {\n
+        \t\t\t super.onResume()\n
+        \t\t\t Toast.makeText(applicationContext, "\"onResume invoked"\", Toast.LENGTH_SHORT).show()\n
+    }\n\n
+
+    override fun onPause() {\n
+        \t\t\t super.onPause()\n
+        \t\t\t Toast.makeText(applicationContext, "\"onPause invoked"\", Toast.LENGTH_SHORT).show()\n
+    }\n\n
+
+    override fun onStop() {\n
+        \t\t\t super.onStop()\n
+        \t\t\t Toast.makeText(applicationContext, "\"onStop invoked"\", Toast.LENGTH_SHORT).show()\n
+    }\n\n
+
+    override fun onRestart() {\n
+        \t\t\t super.onRestart()\n
+        \t\t\t Toast.makeText(applicationContext, "\"onRestart invoked"\", Toast.LENGTH_SHORT).show()\n
+    }\n\n
+
+    override fun onDestroy() {\n
+        \t\t\t super.onDestroy()\n
+        \t\t\t Toast.makeText(applicationContext, "\"onDestroy invoked"\", Toast.LENGTH_SHORT).show()\n
+    }\n\n
+}
+    </string>
+
+    <string name="explicitintent1xml">
+        &lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt;\n\n
+&lt;RelativeLayout\n
+    \t\txmlns:android="\"http://schemas.android.com/apk/res/android"\"\n
+    \t\tandroid:layout_width="\"match_parent"\"\n
+    \t\tandroid:layout_height="\"match_parent"\"&gt;\n\n
+
+    &lt;Button&gt;\n
+        \t\tandroid:id="\"@+id/btn"\"\n
+        \t\tandroid:layout_width="\"match_parent"\"\n
+        \t\tandroid:layout_height="\"match_parent"\"\n
+        \t\tandroid:text="\"Go To Activity 2"\"\n
+        \t\tandroid:layout_margin="\"50dp"\"\n
+        \t\tandroid:layout_centerInParent="\"true"\"&gt;\n&lt;/Button&gt;\n\n
+
+&lt;/RelativeLayout&gt;
+    </string>
+
+    <string name="activity2">
+        &lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt;\n\n
+&lt;RelativeLayout\n
+    \t\txmlns:android="\"http://schemas.android.com/apk/res/android"\"\n
+    \t\tandroid:layout_width="\"match_parent"\"\n
+    \t\tandroid:layout_height="\"match_parent"\"&gt;\n\n
+
+    &lt;Button&gt;\n
+        \t\tandroid:id="\"@+id/btn1"\"\n
+        \t\tandroid:layout_width="\"match_parent"\"\n
+        \t\tandroid:layout_height="\"match_parent"\"\n
+        \t\tandroid:text="\"Go To Activity 1"\"\n
+        \t\tandroid:layout_margin="\"50dp"\"\n
+        \t\tandroid:layout_centerInParent="\"true"\"&gt;\n&lt;/Button&gt;\n\n
+
+&lt;/RelativeLayout&gt;
+    </string>
+
+    <string name="eintent">
+        import android.content.Intent \n
+import androidx.appcompat.app.AppCompatActivity\n
+import android.os.Bundle\n
+import kotlinx.android.synthetic.main.activity_main.*\n\n
+
+class MainActivity : AppCompatActivity()\n
+{\n
+	\toverride fun onCreate(savedInstanceState: Bundle?)\n
+	\t{\n
+		\t\tsuper.onCreate(savedInstanceState)\n
+		\t\tsetContentView(R.layout.activity_main)\n\n
+
+		\t\tbtn.setOnClickListener\n
+		\t\t{ \n
+		\t\t\tintent = Intent(applicationContext, Main2Activity::class.java)  \n
+\t\t\tstartActivity(intent)\n
+		\t\t}\n\n
+
+	\t}\n
+}
+    </string>
+
+    <string name="eintent1">
+        import android.content.Intent \n
+import androidx.appcompat.app.AppCompatActivity\n
+import android.os.Bundle\n
+import kotlinx.android.synthetic.main.activity_main.*\n\n
+
+class MainActivity : AppCompatActivity()\n
+{\n
+	\toverride fun onCreate(savedInstanceState: Bundle?)\n
+	\t{\n
+		\t\tsuper.onCreate(savedInstanceState)\n
+		\t\tsetContentView(R.layout.activity2_main)\n\n
+
+		\t\tbtn1.setOnClickListener\n
+		\t\t{ \n
+		\t\t\tintent = Intent(applicationContext, MainActivity::class.java)  \n
+\t\t\tstartActivity(intent)\n
+		\t\t}\n\n
+
+	\t}\n
+}
+    </string>
+
+    <string name="email_xml">
+        &lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt;\n\n
+&lt;RelativeLayout xmlns:android=http://schemas.android.com/apk/res/android \n
+    \t\t xmlns:app=http://schemas.android.com/apk/res-auto\n
+    \t\t xmlns:tools="\"http://schemas.android.com/tools"\"\n
+    \t\t android:layout_width="\"match_parent"\"\n
+    \t\t android:layout_height="\"match_parent"\"\n
+    \t\t tools:context="\".MainActivity"\"&gt;\n\n
+
+    &lt;Button\n
+        \t\t android:layout_width="\"wrap_content"\"\n
+        \t\t android:layout_height="\"wrap_content"\"\n
+        \t\t android:text="\"launch email"\"\n
+        \t\t android:id="\"@+id/btn_email"\"\n
+        \t\t android:layout_centerInParent="\"true"\"&gt;\n&lt;/Button&gt;\n\n
+
+
+&lt;/RelativeLayout&gt;
+    </string>
+
+    <string name="email_kotlin">
+        \timport android.content.Intent \n
+        import android.net.Uri\n
+import android.os.Bundle\n
+import androidx.appcompat.app.AppCompatActivity\n
+import kotlinx.android.synthetic.main.activity_main.* \n\n
+
+
+class MainActivity : AppCompatActivity()\n
+{\n
+    \toverride fun onCreate(savedInstanceState: Bundle?) \n
+    \t {\n
+        \t \t super.onCreate(savedInstanceState) \n
+        \t \t setContentView(R.layout.activity_main) \n\n
+
+        \t \t btn_email.setOnClickListener {\n
+            \t \t \t val intent = Intent(Intent.ACTION_SEND) \n
+            \t \t \t intent.setData(Uri.parse("\"mailto:"\")) \n
+            \t \t \t var to="\"xyz@gmail.com"\"\n
+            \t \t \t intent.putExtra(Intent.EXTRA_EMAIL, to) \n
+            \t \t \t intent.putExtra(Intent.EXTRA_SUBJECT, "\"First Email"\")\n
+           \t\t\t intent.putExtra(Intent.EXTRA_TEXT, "\"hey, this is my first email message"\")\n
+           \t\t\t intent.setType("\"message/rfc822"\")\n
+            \t \t \t val chooser = Intent.createChooser(intent,"\"Send Email"\")\n
+            \t \t \t startActivity(chooser) \n
+
+        \t \t }\n\n
+
+        
+    \t }\n
+
+
+}
+
+    </string>
+
+    <string name="whatsapp_xml">
+        &lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt;\n\n
+&lt;RelativeLayout xmlns:android=http://schemas.android.com/apk/res/android \n
+    \t\t xmlns:app=http://schemas.android.com/apk/res-auto\n
+    \t\t xmlns:tools="\"http://schemas.android.com/tools"\"\n
+    \t\t android:layout_width="\"match_parent"\"\n
+    \t\t android:layout_height="\"match_parent"\"\n
+    \t\t tools:context="\".MainActivity"\"&gt;\n\n
+
+    &lt;Button\n
+        \t\t android:layout_width="\"wrap_content"\"\n
+        \t\t android:layout_height="\"wrap_content"\"\n
+        \t\t android:text="\"launch whatsapp"\"\n
+        \t\t android:id="\"@+id/btn_whatsapp"\"\n
+        \t\t android:layout_centerInParent="\"true"\"&gt;\n&lt;/Button&gt;\n\n
+
+
+&lt;/RelativeLayout&gt;
+    </string>
+
+    <string name="whatsapp_kotlin">
+        \timport android.content.Intent \n
+        import android.net.Uri\n
+import android.os.Bundle\n
+import androidx.appcompat.app.AppCompatActivity\n
+import kotlinx.android.synthetic.main.activity_main.* \n\n
+
+
+class MainActivity : AppCompatActivity()\n
+{\n
+    \toverride fun onCreate(savedInstanceState: Bundle?) \n
+    \t {\n
+        \t \t super.onCreate(savedInstanceState) \n
+        \t \t setContentView(R.layout.activity_main) \n\n
+
+        \t \t btn_email.setOnClickListener {\n
+            \t \t \t val intent = packageManager.getLaunchIntentForPackage("com.whatsapp") \n
+            \t \t \t val chooser = Intent.createChooser(intent,"Launch Whatsapp") \n
+            \t \t \t startActivity(chooser) \n
+        \t \t }\n\n
+
+
+    \t }\n
+    </string>
+
+    <string name="activity2_xml">
+        &lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt;\n\n
+&lt;RelativeLayout xmlns:android=http://schemas.android.com/apk/res/android\n
+    \t\txmlns:app=http://schemas.android.com/apk/res-auto\n
+    \t\txmlns:tools=http://schemas.android.com/tools\n
+    \t\tandroid:layout_width="\"match_parent"\"\n
+    \t\tandroid:layout_height="\"match_parent"\"\n
+    \t\ttools:context="\".MainActivity"\"&gt;\n\n
+
+    &lt;EditText\n
+        \t\tandroid:layout_width="\"300dp"\"\n
+        \t\tandroid:layout_height="\"wrap_content"\"\n
+        \t\tandroid:hint="\"Message"\"\n
+        \t\tandroid:id="\"@+id/et"\"\n
+        \t\tandroid:layout_centerHorizontal="\"true"\"\n
+        \t\tandroid:layout_marginTop="\"50dp"\"/&gt;\n\n
+    &lt;Button\n
+        \t\tandroid:layout_width="\"wrap_content"\"\n
+        \t\tandroid:layout_height="\"wrap_content"\"\n
+        \t\tandroid:text="\"Submit"\"\n
+        \t\tandroid:id="\"@+id/btn"\"\n
+        \t\tandroid:layout_below="\"@+id/et"\"\n
+        \t\tandroid:layout_centerHorizontal="\"true"\"\n
+        \t\tandroid:layout_marginTop="\"30dp"\"&gt;\n&lt;/Button&gt;\n\n
+&lt;/RelativeLayout&gt;
+    </string>
+
+    <string name="activity2_xml2">
+        &lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt;\n\n
+&lt;RelativeLayout xmlns:android=http://schemas.android.com/apk/res/android\n
+    \t\txmlns:app=http://schemas.android.com/apk/res-auto\n
+    \t\txmlns:tools=http://schemas.android.com/tools\n
+    \t\tandroid:layout_width="\"match_parent"\"\n
+    \t\tandroid:layout_height="\"match_parent"\"\n
+    \t\ttools:context="\".MainActivity"\"&gt;\n\n
+
+    &lt;TextView \n
+        \t\tandroid:layout_width="\"wrap_content"\"\n
+        \t\tandroid:layout_height="\"wrap_content"\"\n
+        \t\tandroid:text="\"Text"\"\n
+        \t\tandroid:textColor="\"#000"\"\n
+        \t\tandroid:id="\"@+id/tv"\"\n
+        \t\tandroid:layout_centerInParent="\"true"\"/&gt;\n\n
+    &lt;/RelativeLayout&gt;
+    </string>
+
+    <string name="activity2_kotlin">
+        import android.content.Intent\n
+import androidx.appcompat.app.AppCompatActivity\n
+import android.os.Bundle\n
+import kotlinx.android.synthetic.main.activity_main.* \n\n
+
+class MainActivity : AppCompatActivity() {\n\n
+
+    \toverride fun onCreate(savedInstanceState: Bundle?) {\n
+        \t\tsuper.onCreate(savedInstanceState) \n
+        \t\tsetContentView(R.layout.activity_main) \n\n
+
+        \t\tbtn.setOnClickListener {\n
+
+            \t\t\tvar str:String = et.text.toString()\n\n
+
+            \t\t\tval intent = Intent(applicationContext,Main2Activity::class.java) \n
+            \t\t\tintent.putExtra("\"msg"\",str); \n
+            \t\t\tstartActivity(intent) \n
+        \t\t\t}\n
+\t\t}\n\n
+}\n
+    </string>
+
+    <string name="activity2_kotlin2">
+        import android.content.Intent\n
+import androidx.appcompat.app.AppCompatActivity\n
+import android.os.Bundle\n
+import kotlinx.android.synthetic.main.activity_main.* \n\n
+
+class MainActivity : AppCompatActivity() {\n\n
+
+    \toverride fun onCreate(savedInstanceState: Bundle?) {\n
+        \t\tsuper.onCreate(savedInstanceState) \n
+        \t\tsetContentView(R.layout.activity2_main) \n\n
+
+        \t\t\t val bundle:Bundle? = intent.extras \n
+
+         \t\t\t val str = bundle!!.getString("\"msg"\") \n
+
+            \t\t\t tv.text = str \n
+
+\t\t}\n\n
+}\n
+    </string>
+
+    <string name="alert_xml">
+        &lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt;\n\n
+&lt;RelativeLayout xmlns:android=http://schemas.android.com/apk/res/android \n
+    \t\t xmlns:app=http://schemas.android.com/apk/res-auto\n
+    \t\t xmlns:tools="\"http://schemas.android.com/tools"\"\n
+    \t\t android:layout_width="\"match_parent"\"\n
+    \t\t android:layout_height="\"match_parent"\"\n
+    \t\t tools:context="\".MainActivity"\"&gt;\n\n
+
+    &lt;Button\n
+        \t\t android:layout_width="\"wrap_content"\"\n
+        \t\t android:layout_height="\"wrap_content"\"\n
+        \t\t android:text="\"click here !"\"\n
+        \t\t android:id="\"@+id/btn_alert"\"\n
+        \t\t android:layout_centerInParent="\"true"\"&gt;\n&lt;/Button&gt;\n\n
+
+
+&lt;/RelativeLayout&gt;
+    </string>
+
+    <string name="alert_kotlin">
+        import android.content.DialogInterface
+import android.os.Bundle\n
+import android.widget.Toast\n
+import androidx.appcompat.app.AlertDialog\n
+import androidx.appcompat.app.AppCompatActivity\n
+import kotlinx.android.synthetic.main.activity_main.*\n\n
+
+
+class MainActivity : AppCompatActivity()\n
+{\n\n
+
+    \toverride fun onCreate(savedInstanceState: Bundle?)\n
+    \t{\n
+        \t\tsuper.onCreate(savedInstanceState)\n
+        \t\tsetContentView(R.layout.activity_main)\n\n
+
+        \t\tbtn_alert.setOnClickListener {\n
+            \t\t\tval builder = AlertDialog.Builder(this)\n
+            \t\t\tbuilder.setTitle("\"Android with kotlin says"\")\n
+            \t\t\tbuilder.setMessage("\"This is a alert dialog"\")\n
+            \t\t\tbuilder.setPositiveButton("\"Yes"\",{ dialogInterface: DialogInterface, i: Int ->\n
+                \t\t\tToast.makeText(this@MainActivity,"\"You Pressed Yes"\",Toast.LENGTH_SHORT).show()
+            \t\t})\n\n
+
+            \t\t\tbuilder.setNegativeButton("\"No"\",{ dialogInterface: DialogInterface, i: Int ->\n
+                \t\t\tToast.makeText(this@MainActivity,"\"You Pressed No"\",Toast.LENGTH_SHORT).show()\n
+            \t\t\t})\n
+            \t\t\tbuilder.show()\n\n
+        \t\t}\n
+
+    \t}\n\n
+
+}
+    </string>
+
+    <string name="datetime_xml">
+        &lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt;\n\n
+&lt;RelativeLayout xmlns:android=http://schemas.android.com/apk/res/android \n
+    \t\txmlns:app=http://schemas.android.com/apk/res-auto\n
+    \t\txmlns:tools="\"http://schemas.android.com/tools"\"\n
+    \t\t android:layout_width="\"match_parent"\"\n
+    \t\t android:layout_height="\"match_parent"\"\n
+    \t\t tools:context="\".MainActivity"\"&gt;\n\n
+
+        &lt;Button\n
+        \t\tandroid:layout_width="\"wrap_content"\"\n
+        \t\tandroid:layout_height="\"wrap_content"\"\n
+        \t\tandroid:text="\"Date And Time ?"\"\n
+        \t\tandroid:id="\"@+id/btn_dt"\"\n
+        \t\tandroid:layout_centerInParent="\"true"\"\n
+        \t\tandroid:layout_centerHorizontal="\"true"\"\n
+        \t\tandroid:layout_marginBottom="\"20dp"\"&gt;\n&lt;/Button&gt;\n\n
+
+    &lt;TextView\n
+        \t\tandroid:layout_width="\"wrap_content"\"\n
+        \t\tandroid:layout_height="\"wrap_content"\"\n
+        \t\tandroid:text="\"Date : DD : MM : YY"\"\n
+        \t\tandroid:textStyle="\"bold"\"\n
+        \t\tandroid:textColor="\"#000"\"\n
+        \t\tandroid:textSize="\"20sp"\"\n
+        \t\tandroid:id="\"@+id/tv_dt"\"\n
+        \t\tandroid:layout_above="\"@+id/btn_dt"\"\n
+        \t\tandroid:layout_marginBottom="\"30dp"\"\n
+        \t\tandroid:layout_centerHorizontal="\"true"\"&gt;\n&lt;/TextView&gt;\n\n
+
+    &lt;TextView\n
+        \t\tandroid:layout_width="\"wrap_content"\"\n
+        \t\tandroid:layout_height="\"wrap_content"\"\n
+        \t\tandroid:text="\"Time : Hrs : Mins"\"\n
+        \t\tandroid:textStyle="\"bold"\"\n
+        \t\tandroid:textColor="\"#000"\"\n
+        \t\tandroid:textSize="\"20sp"\"\n
+        \t\tandroid:id="\"@+id/tv_time"\"\n
+        \t\tandroid:layout_above="\"@+id/tv_dt"\"\n
+        \t\tandroid:layout_marginBottom="\"30dp"\"\n
+        \t\tandroid:layout_centerHorizontal="\"true"\"&gt;\n&lt;/TextView&gt; \n\n
+
+        &lt;/RelativeLayout&gt;
+    </string>
+
+    <string name="datetime_kotlin">
+        import android.app.DatePickerDialog\n
+import android.app.TimePickerDialog\n
+import android.os.Bundle\n
+import android.widget.DatePicker\n
+import android.widget.TimePicker\n
+import androidx.appcompat.app.AppCompatActivity\n
+import kotlinx.android.synthetic.main.activity_main.*\n
+import java.util.*\n\n
+
+
+class MainActivity : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener\n
+{\n\n
+
+    \tvar day = 0\n
+    \tvar month = 0\n
+    \tvar year = 0\n
+    \tvar hour = 0\n
+    \tvar minute = 0\n\n
+
+    \tvar savedday = 0\n
+    \tvar savedmonth = 0\n
+    \tvar savedyear = 0\n
+    \tvar savedhour = 0\n
+    \tvar savedminute = 0\n\n
+
+    \toverride fun onCreate(savedInstanceState: Bundle?)\n
+    \t{\n
+        \t\tsuper.onCreate(savedInstanceState)\n
+        \t\tsetContentView(R.layout.activity_main)\n\n
+
+        \t\tpickDate()\n\n
+
+    \t}\n\n
+
+    \tprivate fun getDateTimeCalendar()\n
+    \t{\n
+        \t\tval calendar = Calendar.getInstance()\n
+        \t\tday = calendar.get(Calendar.DAY_OF_MONTH)\n
+        \t\tmonth = calendar.get(Calendar.MONTH)\n
+        \t\tyear = calendar.get(Calendar.YEAR)\n
+        \t\thour = calendar.get(Calendar.HOUR)\n
+        \t\tminute = calendar.get(Calendar.MINUTE)\n
+    \t}\n
+
+    \tprivate fun pickDate() {\n
+        \t\tbtn_dt.setOnClickListener {\n
+            \t\t\tDatePickerDialog(this,this,year,month,day).show()\n
+        \t\t}\n
+    \t}\n\n
+
+
+    \toverride fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {\n
+        \t\tsavedday = dayOfMonth\n
+        \t\tsavedmonth = month\n
+        \t\tsavedyear = year\n\n
+
+        \t\tgetDateTimeCalendar()\n
+        \t\tTimePickerDialog(this,this,hour,minute,true).show()\n
+    \t}\n\n
+
+    \toverride fun onTimeSet(view: TimePicker?, hourOfDay: Int, minute: Int) {\n
+        \t\tsavedhour = hourOfDay\n
+        \t\tsavedminute = minute\n\n
+
+        \t\ttv_dt.text = "\"Date : $savedday : $savedmonth :$savedyear"\"\n
+        \t\ttv_time.text = "\"Time : $savedhour : $savedminute"\"\n
+    \t}\n\n
+
+}
+    </string>
+
+    <string name="simple_notif_xml">
+        &lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt;\n\n
+&lt;RelativeLayout xmlns:android=http://schemas.android.com/apk/res/android \n
+    \t\txmlns:app=http://schemas.android.com/apk/res-auto\n
+    \t\txmlns:tools="\"http://schemas.android.com/tools"\"\n
+    \t\tandroid:layout_width="\"match_parent"\"\n
+    \t\tandroid:layout_height="\"match_parent"\"\n
+    \t\ttools:context="\".MainActivity"\"&gt;\n\n
+
+    &lt;Button\n
+        \t\tandroid:layout_width="\"wrap_content"\"\n
+        \t\tandroid:layout_height="\"wrap_content"\"\n
+        \t\tandroid:text="\"notification"\"\n
+        \t\tandroid:id="\"@+id/btn_notif"\"\n
+        \t\tandroid:layout_centerInParent="\"true"\"&gt;\n&lt;/Button&gt;\n\n
+
+
+&lt;/RelativeLayout&gt;
+    </string>
+
+    <string name="simple_notif_kotlin">
+        \timport android.app.Notification\n
+import android.app.NotificationChannel\n
+import android.app.NotificationManager\n
+import android.app.PendingIntent\n
+import android.content.Context\n
+import android.content.Intent\n
+import android.graphics.BitmapFactory\n
+import android.graphics.Color\n
+import android.os.Bundle\n
+import androidx.appcompat.app.AppCompatActivity\n
+import kotlinx.android.synthetic.main.activity_main.*\n\n
+
+class MainActivity : AppCompatActivity()\n
+{\n\n
+
+    \tlateinit var notificationManager: NotificationManager\n
+    \tlateinit var notificationChannel: NotificationChannel\n
+    \tlateinit var builder : Notification.Builder\n\n
+
+    \tprivate var channelId = "\"com.lalith.testing"\\n
+    \tprivate var description = "\"Test Notification"\"\n\n
+
+    \toverride fun onCreate(savedInstanceState: Bundle?)\n
+    \t{\n
+        \t\tsuper.onCreate(savedInstanceState)\n
+        \t\tsetContentView(R.layout.activity_main)\n\n
+
+        \t\tnotificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager\n\n
+
+        \t\tbtn_n.setOnClickListener {\n\n
+
+            \t\t\tval intent = Intent(this,MainActivity::class.java)\n
+            \t\t\tval pendingIntent = PendingIntent.getActivity(this,0,intent,PendingIntent.FLAG_UPDATE_CURRENT)\n\n
+
+            \t\t\tif (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {\n
+                \t\t\t\tnotificationChannel = NotificationChannel(channelId,description,NotificationManager.IMPORTANCE_HIGH)\n
+                \t\t\t\tnotificationChannel.enableLights(true)\n
+                \t\t\t\tnotificationChannel.lightColor = Color.WHITE\n
+                \t\t\t\tnotificationChannel.enableVibration(true)\n
+                \t\t\t\tnotificationManager.createNotificationChannel(notificationChannel)\n\n
+
+                \t\t\t\tbuilder = Notification.Builder(this,channelId)\n
+                    \t\t\t\t\t.setContentTitle("\"Android with kotlin"\")\n
+                    \t\t\t\t\t.setContentText("\"Test Notification"\")\n
+                    \t\t\t\t\t.setSmallIcon(R.mipmap.ic_launcher_round)\n
+                    \t\t\t\t\t.setLargeIcon(BitmapFactory.decodeResource(this.resources,R.mipmap.ic_launcher))\n
+                    \t\t\t\t\t.setContentIntent(pendingIntent)\n
+            \t\t\t}\n
+            \t\t\telse\n
+            \t\t\t{\n
+                \t\t\t\tbuilder = Notification.Builder(this)\n
+                    \t\t\t\t\t.setContentTitle("\"Android with kotlin"\")\n
+                    \t\t\t\t\t.setContentText("\"Test Notification"\")\n
+                    \t\t\t\t\t.setSmallIcon(R.drawable.ic_launcher_foreground)\n
+                    \t\t\t\t\t.setLargeIcon(BitmapFactory.decodeResource(this.resources,R.drawable.ic_launcher_foreground))\n
+                    \t\t\t\t\t.setContentIntent(pendingIntent)\n
+            \t\t\t}\n\n
+
+            \t\t\tnotificationManager.notify(1234,builder.build())\n\n
+        \t\t}\n
+    \t}\n
+}
+    </string>
+
+    <string name="button_xml">
+        &lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt;\n\n
+&lt;RelativeLayout xmlns:android=http://schemas.android.com/apk/res/android \n
+    \t\txmlns:app=http://schemas.android.com/apk/res-auto\n
+    \t\txmlns:tools="\"http://schemas.android.com/tools"\"\n
+    \t\tandroid:layout_width="\"match_parent"\"\n
+    \t\tandroid:layout_height="\"match_parent"\"\n
+    \t\ttools:context="\".MainActivity"\"&gt;\n\n
+
+    &lt;Button\n
+        \t\tandroid:layout_width="\"wrap_content"\"\n
+        \t\tandroid:layout_height="\"wrap_content"\"\n
+        \t\tandroid:text="\"click me !"\"\n
+        \t\tandroid:id="\"@+id/button"\"\n
+        \t\tandroid:layout_centerInParent="\"true"\"&gt;\n&lt;/Button&gt;\n\n
+
+
+&lt;/RelativeLayout&gt;
+    </string>
+
+    <string name="button_kotlin">
+       \timport android.os.Bundle\n
+    import androidx.appcompat.app.AppCompatActivity\n
+    import kotlinx.android.synthetic.main.activity_main.*\n\n
+
+    class MainActivity : AppCompatActivity()\n
+    {\n\n
+
+    \toverride fun onCreate(savedInstanceState: Bundle?)\n
+    \t{\n
+    \t\tsuper.onCreate(savedInstanceState)\n
+    \t\tsetContentView(R.layout.activity_main)\n\n
+
+    \t\tbutton.setOnClickListener {\n\n
+
+    \t\t\tToast.makeText(context,"Button Clicked !",Toast.LENGTH_SHORT).show()\n\n
+
+    \t\t}\n
+    \t}\n
+    }
+    </string>
+
+    <string name="imgbutton_xml">
+    &lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt;\n\n
+    &lt;RelativeLayout xmlns:android=http://schemas.android.com/apk/res/android \n
+    \t\txmlns:app=http://schemas.android.com/apk/res-auto\n
+    \t\txmlns:tools="\"http://schemas.android.com/tools"\"\n
+    \t\tandroid:layout_width="\"match_parent"\"\n
+    \t\tandroid:layout_height="\"match_parent"\"\n
+    \t\ttools:context="\".MainActivity"\"&gt;\n\n
+
+    &lt;ImageButton\n
+    \t\tandroid:layout_width="\"200dp"\"\n
+    \t\tandroid:layout_height="\"200dp"\"\n
+    \t\tandroid:src="\"@drawable/logo"\"\n
+    \t\tandroid:id="\"@+id/image_button"\"\n
+    \t\tandroid:layout_centerInParent="\"true"\"&gt;\n&lt;/ImageButton&gt;\n\n
+
+        &lt;/RelativeLayout&gt;</string>
+
+    <string name="imgbutton_kotlin">
+       \timport android.os.Bundle\n
+    import androidx.appcompat.app.AppCompatActivity\n
+    import kotlinx.android.synthetic.main.activity_main.*\n\n
+
+    class MainActivity : AppCompatActivity()\n
+    {\n\n
+
+    \toverride fun onCreate(savedInstanceState: Bundle?)\n
+    \t{\n
+    \t\tsuper.onCreate(savedInstanceState)\n
+    \t\tsetContentView(R.layout.activity_main)\n\n
+
+    \t\timage_button.setOnClickListener {\n\n
+
+    \t\t\tToast.makeText(context,"Image Button Clicked !",Toast.LENGTH_SHORT).show()\n\n
+
+    \t\t}\n
+    \t}\n
+    }
+    </string>
+
+    <string name="img_xml">
+    &lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt;\n\n
+    &lt;RelativeLayout xmlns:android=http://schemas.android.com/apk/res/android \n
+    \t\txmlns:app=http://schemas.android.com/apk/res-auto\n
+    \t\txmlns:tools="\"http://schemas.android.com/tools"\"\n
+    \t\tandroid:layout_width="\"match_parent"\"\n
+    \t\tandroid:layout_height="\"match_parent"\"\n
+    \t\ttools:context="\".MainActivity"\"&gt;\n\n
+
+    &lt;ImageView\n
+    \t\tandroid:layout_width="\"200dp"\"\n
+    \t\tandroid:layout_height="\"200dp"\"\n
+    \t\tandroid:src="\"@drawable/logo"\"\n
+    \t\tandroid:id="\"@+id/image"\"\n
+        \t\tandroid:layout_centerInParent="\"true"\"&gt;\n&lt;/ImageView&gt;\n\n</string>
+
+    <string name="img_kotlin">
+       \timport android.os.Bundle\n
+    import androidx.appcompat.app.AppCompatActivity\n
+    import kotlinx.android.synthetic.main.activity_main.*\n\n
+
+    class MainActivity : AppCompatActivity()\n
+    {\n\n
+
+    \toverride fun onCreate(savedInstanceState: Bundle?)\n
+    \t{\n
+    \t\tsuper.onCreate(savedInstanceState)\n
+    \t\tsetContentView(R.layout.activity_main)\n\n
+
+    \t\timage.setOnClickListener {\n\n
+
+    \t\t\tToast.makeText(context,"Image Button Clicked !",Toast.LENGTH_SHORT).show()\n\n
+
+    \t\t}\n
+    \t}\n
+    }
+    </string>
+
+    <string name="radiobtn_xml">
+        &lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt;\n\n
+&lt;RelativeLayout\n
+    \t\txmlns:android="\"http://schemas.android.com/apk/res/android"\"\n
+    \t\tandroid:layout_width="\"match_parent"\"\n
+    \t\tandroid:layout_height="\"match_parent"\"&gt;\n\n
+
+    &lt;RadioGroup\n
+        \t\tandroid:layout_width="\"wrap_content"\"\n
+        \t\tandroid:layout_height="\"wrap_content"\"\n
+        \t\tandroid:id="\"@+id/rg"\"\n
+        \t\tandroid:layout_above="\"@+id/rbtn"\"\n
+        \t\tandroid:layout_centerHorizontal="\"true"\"\n
+        \t\tandroid:orientation="\"horizontal"\"\n
+        \t\tandroid:layout_marginBottom="\"30dp"\"&gt;\n\n
+
+        &lt;RadioButton\n
+            \t\tandroid:layout_width="\"wrap_content"\"\n
+            \t\tandroid:id="\"@+id/rbtn1"\"\n
+            \t\tandroid:layout_height="\"wrap_content"\"\n
+            \t\tandroid:textSize="\"20sp"\"\n
+            \t\tandroid:text="\"On"\"&gt;\n&lt;/RadioButton&gt;\n
+        &lt;RadioButton\n
+            \t\tandroid:layout_width="\"wrap_content"\"\n
+            \t\tandroid:layout_height="\"wrap_content"\"\n
+            \t\tandroid:text="\"Off"\"\n
+            \t\tandroid:id="\"@+id/rbn2"\"\n
+            \t\tandroid:textSize="\"20sp"\"\n
+            \t\tandroid:layout_marginLeft="\"10dp"\"&gt;\n&lt;/RadioButton&gt;\n\n
+    &lt;/RadioGroup&gt;\n\n
+
+    &lt;Button\n
+        \t\tandroid:layout_width="\"match_parent"\"\n
+        \t\tandroid:layout_height="\"?attr/actionBarSize"\"\n
+        \t\tandroid:layout_margin="\"30dp"\"\n
+        \t\tandroid:text="\"Submit"\"\n
+        \t\tandroid:id="\"@+id/rbtn"\"\n
+        \t\tandroid:layout_centerInParent="\"true"\"\n
+        \t\tandroid:background="\"@color/blue"\"\n
+        \t\tandroid:textColor="\"@color/white"\"&gt;\n&lt;/Button&gt;\n\n
+
+&lt;/RelativeLayout&gt;
+    </string>
+
+    <string name="radiobtn_kotlin">
+        \timport android.view.View
+import android.view.ViewGroup
+import android.widget.Button
+import android.widget.RadioButton
+import android.widget.RadioGroup
+import android.widget.Toast
+        \timport android.os.Bundle\n
+    import androidx.appcompat.app.AppCompatActivity\n
+    import kotlinx.android.synthetic.main.activity_main.*\n\n
+        class MainActivity : AppCompatActivity()\n
+    {\n\n
+
+    \toverride fun onCreate(savedInstanceState: Bundle?)\n
+    \t{\n
+    \t\tsuper.onCreate(savedInstanceState)\n
+    \t\tsetContentView(R.layout.activity_main)\n\n
+     \t\tvar radio_btn = view.findViewById(R.id.rbtn)
+     \t\tvar rg = view.findViewById(R.id.rg)
+
+
+    \t\trbtn.setOnClickListener {\n\n
+    \t\tval check:Int = rg.checkedRadioButtonId\n\n
+     \t\tval st= view.findViewById&lt;RadioButton&gt;(check)\n\n
+     \t\tvar str = st.text\n\n
+    \t\t\tToast.makeText(context,"Image Button Clicked !",Toast.LENGTH_SHORT).show()\n\n
+
+    \t\t}\n
+    \t}\n
+    }
+    </string>
+
+    <string name="spinner_xml">
+        &lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt;\n\n
+&lt;RelativeLayout xmlns:android=http://schemas.android.com/apk/res/android \n
+    \t\t xmlns:app=http://schemas.android.com/apk/res-auto\n
+    \t\t xmlns:tools="\"http://schemas.android.com/tools"\"\n
+    \t\t android:layout_width="\"match_parent"\"\n
+    \t\t android:layout_height="\"match_parent"\"\n
+    \t\t tools:context="\".MainActivity"\"&gt;\n\n
+
+    &lt;Spinner\n
+        \t\t android:layout_width="\"wrap_content"\"\n
+        \t\t android:layout_height="\"wrap_content"\"\n
+        \t\t android:id="\"@+id/spinner"\"\n
+        \t\t android:layout_centerInParent="\"true"\"&gt;\n&lt;/Button&gt;\n\n
+
+
+&lt;/RelativeLayout&gt;
+    </string>
+
+    <string name="spinner_kotlin">
+        \timport android.os.Bundle\n
+import android.view.View\n
+import android.widget.AdapterView\n
+import android.widget.ArrayAdapter\n
+import android.widget.Toast\n
+import androidx.appcompat.app.AppCompatActivity\n
+import kotlinx.android.synthetic.main.activity_main.*\n\n
+
+class MainActivity : AppCompatActivity()\n
+{\n
+    \toverride fun onCreate(savedInstanceState: Bundle?)\n
+    \t{\n
+        \t\tval languages = resources.getStringArray(R.array.Languages)\n\n
+
+        \t\tsuper.onCreate(savedInstanceState)\n
+        \t\tsetContentView(R.layout.activity_main)\n
+
+        \t\tif (spinner != null) {\n\n
+            \t\t\tval adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, languages)\n
+            \t\t\tspinner.adapter = adapter\n\n
+
+            \t\tspinner.onItemSelectedListener = object :\n
+                \t\t\tAdapterView.OnItemSelectedListener {\n
+                \t\t\toverride fun onItemSelected(parent: AdapterView&lt;*&gt;, view: View, position: Int, id: Long) {\n
+                    \t\t\t\tToast.makeText(this@MainActivity, getString(R.string.selected_item) + "\" "\" + "\""\" + languages[position], Toast.LENGTH_SHORT).show()\n
+                \t\t\t}\n\n
+
+                \t\t\toverride fun onNothingSelected(parent: AdapterView&lt;*&gt;) {\n
+                    \t\t\t// write code to perform some action\n
+                \t\t\t}\n\n
+            \t\t}\n\n
+
+        \t\t}\n
+    \t}\n
+}\n
+    </string>
+
+    <string name="cbxml">
+        &lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt;\n\n
+&lt;RelativeLayout\n
+    \t\txmlns:android="\"http://schemas.android.com/apk/res/android"\" android:layout_width="\"match_parent"\"\n
+    \t\tandroid:layout_height="\"match_parent"\"&gt;\n\n
+
+    &lt;RelativeLayout\n
+        \t\tandroid:layout_width="\"match_parent"\"\n
+        \t\tandroid:layout_height="\"wrap_content"\"\n
+        \t\tandroid:layout_centerInParent="\"true"\"&gt;\n\n
+
+    &lt;CheckBox\n
+        \t\tandroid:layout_width="\"wrap_content"\"\n
+        \t\tandroid:layout_height="\"wrap_content"\"\n
+        \t\tandroid:text="\"Android"\\n
+        \t\tandroid:layout_centerHorizontal="\"true"\"\n
+        \t\tandroid:layout_marginTop="\"10dp"\"\n
+        \t\tandroid:id="\"@+id/cb1"\"&gt;\n&lt;/CheckBox&gt;\n\n
+    &lt;CheckBox\n
+        \t\tandroid:layout_width="\"wrap_content"\"\n
+        \t\tandroid:layout_height="\"wrap_content"\"\n
+        \t\tandroid:text="\"Kotlin"\"\n
+        \t\tandroid:layout_below="\"@+id/cb1"\"\n
+        \t\tandroid:layout_marginTop="\"10dp"\"\n
+        \t\tandroid:layout_centerHorizontal="\"true"\"\n
+        \t\tandroid:id="\"@+id/cb2"\"&gt;\n&lt;/CheckBox&gt;\n\n
+    &lt;CheckBox\n
+        \t\tandroid:layout_width="\"wrap_content"\"\n
+        \t\tandroid:layout_height="\"wrap_content"\"\n
+        \t\tandroid:text="\"Java"\"\n
+        \t\tandroid:layout_below="\"@+id/cb2"\"\n
+        \t\tandroid:layout_marginTop="\"10dp"\"\n
+        \t\tandroid:layout_centerHorizontal="\"true"\"\n
+        \t\tandroid:id="\"@+id/cb3"\"&gt;\n&lt;/CheckBox&gt;\n\n
+
+    &lt;Button\n
+        \t\tandroid:layout_width="\"match_parent"\"\n
+        \t\tandroid:layout_height="\"?android:attr/actionBarSize"\"\n
+        \t\tandroid:layout_below="\"@+id/cb3"\"\n
+        \t\tandroid:id="\"@+id/cb_btn"\"\n
+        \t\tandroid:layout_margin="\"30dp"\"\n
+        \t\tandroid:text="\"submit"\"\n
+        \t\tandroid:background="\"@color/blue"\"\n
+        \t\tandroid:gravity="\"center"\"\n
+        \t\tandroid:textColor="\"@color/white"\"&gt;\n&lt;/Button&gt;\n\n
+    &lt;/RelativeLayout&gt;\n\n
+
+&lt;/RelativeLayout&gt;
+    </string>
+
+    <string name="cbkotlin">
+        \timport android.os.Bundle\n
+    import androidx.appcompat.app.AppCompatActivity\n
+    import kotlinx.android.synthetic.main.activity_main.*\n\n
+
+    class MainActivity : AppCompatActivity()\n
+    {\n\n
+
+    \toverride fun onCreate(savedInstanceState: Bundle?)\n
+    \t{\n
+    \t\tsuper.onCreate(savedInstanceState)\n
+    \t\tsetContentView(R.layout.activity_main)\n\n
+
+    \t\tcb_button.setOnClickListener {\n\n
+
+                \t\t\tif(cb1.isChecked())\n
+            \t\t\t{
+                \t\t\t\tToast.makeText(activity,cb1.text,Toast.LENGTH_SHORT).show()\n
+            \t\t\t}\n\n
+
+            \t\t\tif(cb2.isChecked())\n
+            \t\t\t{
+                \t\t\t\tToast.makeText(activity,cb2.text,Toast.LENGTH_SHORT).show()\n
+            \t\t\t}\n\n
+
+            \t\t\tif(cb3.isChecked())\n
+            \t\t\t{
+                \t\t\t\tToast.makeText(activity,cb3.text,Toast.LENGTH_SHORT).show()\n
+            \t\t\t}\n\n
+
+    \t\t}\n
+    \t}\n
+    }
+    </string>
+
+    <string name="lv_xml">
+         &lt;?xml version="\"1.0"\" encoding="\"utf-8"\"?&gt;\n\n
+&lt;RelativeLayout\n
+    \t\txmlns:android="\"http://schemas.android.com/apk/res/android"\"\n
+    \t\tandroid:layout_width="\"match_parent"\"\n
+    \t\tandroid:layout_height="\"match_parent"\"&gt;\n\n
+
+    &lt;ListView&gt;\n
+        \t\tandroid:id="\"@+id/lv"\"\n
+        \t\tandroid:layout_width="\"match_parent"\"\n
+        \t\tandroid:layout_height="\"wrap_content"\"\n
+        \t\tandroid:entries="\"@array/list"\"\n
+        \t\tandroid:layout_margin="\"10dp"\"\n
+        \t\tandroid:clickable="\"true"\"\n
+        \t\tandroid:divider="\"#eeeeee"\"\n
+        \t\tandroid:dividerHeight="\"2dp"\"\n
+        \t\tndroid:footerDividersEnabled="\"true"\"&gt;\n&lt;/ListView&gt;\n\n
+
+&lt;/RelativeLayout&gt;
+    </string>
+
+    <string name="lv_kotlin">
+        \timport androidx.appcompat.app.AppCompatActivity\n
+import android.os.Bundle\n
+import android.widget.ArrayAdapter\n
+import android.widget.Toast\n
+import kotlinx.android.synthetic.main.activity_main.*\n\n
+
+class MainActivity : AppCompatActivity() {\n\n
+
+    \toverride fun onCreate(savedInstanceState: Bundle?) {\n
+        \t\tsuper.onCreate(savedInstanceState)\n
+        \t\tsetContentView(R.layout.activity_main)\n\n
+
+        \t\tvar arr:Array&lt;String&gt; = resources.getStringArray(R.array.list)\n
+        \t\tvar arrayAdapter = ArrayAdapter&lt;String&gt;(this,android.R.layout.simple_expandable_list_item_1,arr)\n
+        \t\tlv.setAdapter(arrayAdapter)\n\n
+
+        \t\tlv.setOnItemClickListener { parent, view, position, id ->\n
+            \t\t\tvar str:String = parent.getItemAtPosition(position) as String\n
+            \t\t\tToast.makeText(this,"\"Your in ${str}"\",Toast.LENGTH_SHORT).show()\n
+        \t\t}\n\n
+    \t}\n
+}
+    </string>
+
+    <string name="wv_xml">
+        &lt;RelativeLayout\n
+    \t\txmlns:android="\"http://schemas.android.com/apk/res/android"\"\n
+    \t\tandroid:layout_width="\"match_parent"\"\n
+    \t\tandroid:layout_height="\"match_parent"\"&gt;\n\n
+
+    &lt;WebView&gt;\n
+        \t\tandroid:id="\"@+id/lv"\"\n
+        \t\tandroid:layout_width="\"match_parent"\"\n
+        \t\tandroid:layout_height="\"match_parent"\"\n
+        \t\tandroid:layout_margin="\"10dp"\"\n&gt;\n&lt;/WebView&gt;\n\n
+
+&lt;/RelativeLayout&gt;
+    </string>
+
+    <string name="maifest">
+        &lt;uses-permission android:name="android.permission.INTERNET" /&gt;
+    </string>
+
+    <string name="wv_kotlin">
+        \timport android.os.Build\n
+import androidx.appcompat.app.AppCompatActivity\n
+import android.os.Bundle\n
+import android.webkit.WebViewClient\n
+import android.widget.Toast\n
+import androidx.annotation.RequiresApi\n
+import kotlinx.android.synthetic.main.activity_main.*\n
+import kotlinx.android.synthetic.main.custom_toast.*\n\n
+
+class MainActivity : AppCompatActivity() {\n
+    \t@RequiresApi(Build.VERSION_CODES.O)\n
+    \toverride fun onCreate(savedInstanceState: Bundle?) {\n
+        \t\tsuper.onCreate(savedInstanceState)\n
+        \t\tsetContentView(R.layout.activity_main)\n\n
+
+        \t\t\twebViewsetup()\n
+        \t\t\tToast(this).apply {\n
+            \t\t\t\tduration = Toast.LENGTH_SHORT\n
+            \t\t\t\tview = layoutInflater.inflate(R.layout.custom_toast,toast)\n
+            \t\t\t\tshow()\n
+        \t\t\t}\n\n
+    \t}\n\n
+
+    \t\t@RequiresApi(Build.VERSION_CODES.O)\n
+    \t\tprivate fun webViewsetup() // makes sures the webpage opens in the app.\n
+    \t\t{\n
+        \t\t\twv.webViewClient = WebViewClient()\n
+        \t\t\twv.apply {\n
+            \t\t\t\tloadUrl("\"https://www.google.com/"\")\n
+            \t\t\t\tsettings.javaScriptEnabled = true\n
+            \t\t\t\tsettings.safeBrowsingEnabled = \n
+
+        \t\t\t}\n
+    }
+    </string>
+
+</resources>
+
+
+
+
+
+

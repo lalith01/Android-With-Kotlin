@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_margin="30dp"
+        android:text="click here !"
+        android:id="@+id/btn_alert"
+        android:layout_centerInParent="true"
+        android:background="@color/blue"
+        android:textColor="@color/white"></Button>
+
+</RelativeLayout>

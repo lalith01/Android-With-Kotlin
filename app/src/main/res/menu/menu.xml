@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottom_nav_xml"
+        android:icon="@drawable/xml"
+        android:title="XML"></item>
+
+    <item
+        android:id="@+id/bottom_nav_kotlin"
+        android:icon="@drawable/code"
+        android:title="Kotlin"></item>
+
+    <item
+        android:id="@+id/bottom_nav_run"
+        android:icon="@drawable/play"
+        android:title="Play"></item>
+
+</menu>

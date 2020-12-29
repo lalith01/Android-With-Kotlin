@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sv_xml"
+                android:layout_margin="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textSize="20sp"
+                        android:id="@+id/tv1"
+                        android:text="activity_main"
+                        android:textStyle="bold"
+                        android:textColor="@color/blue"
+                        android:letterSpacing="0.1"></TextView>
+
+                    <HorizontalScrollView
+                        android:id="@+id/h_scroll_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv1"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:id="@+id/tv2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/activity2_xml"
+                            android:textSize="16sp"
+                            android:gravity="left"
+                            android:textColor="#000"
+                            android:lineSpacingExtra="3sp"
+                            android:letterSpacing="0.1"></TextView>
+
+                    </HorizontalScrollView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textSize="20sp"
+                        android:id="@+id/tv3"
+                        android:text="activity2_main"
+                        android:layout_below="@+id/h_scroll_view"
+                        android:layout_marginTop="20dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/blue"
+                        android:letterSpacing="0.1"></TextView>
+
+                    <HorizontalScrollView
+                        android:id="@+id/h2_scroll_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv3"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:id="@+id/tv4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/activity2_xml2"
+                            android:textSize="16sp"
+                            android:gravity="left"
+                            android:textColor="#000"
+                            android:lineSpacingExtra="3sp"
+                            android:letterSpacing="0.1"></TextView>
+
+                    </HorizontalScrollView>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/xml_floatactivity"
+                        app:fabSize="normal"
+                        app:backgroundTint="@color/blue"
+                        android:src="@drawable/copy"
+                        android:layout_below="@+id/h2_scroll_view"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="30dp"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+                </RelativeLayout>
+
+            </ScrollView>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sv_kotlin"
+                android:layout_margin="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textSize="20sp"
+                        android:id="@+id/et_hd_kotlin"
+                        android:text="MainActivity.Kt"
+                        android:textStyle="bold"
+                        android:textColor="@color/blue"
+                        android:letterSpacing="0.1"></TextView>
+
+                    <HorizontalScrollView
+                        android:id="@+id/h_scroll_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/et_hd_kotlin"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:id="@+id/et_kotlin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:gravity="left"
+                            android:textColor="#000"
+                            android:text="@string/EditText_koltin"
+                            android:lineSpacingExtra="3sp"
+                            android:letterSpacing="0.1"></TextView>
+
+                    </HorizontalScrollView>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/et_kotlin_floatbtn"
+                        app:fabSize="normal"
+                        app:backgroundTint="@color/blue"
+                        android:src="@drawable/copy"
+                        android:layout_below="@+id/h_scroll_view"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="30dp"></com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+                </RelativeLayout>
+
+            </ScrollView>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

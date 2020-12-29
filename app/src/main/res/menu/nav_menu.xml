@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+
+        <item
+            android:id="@+id/nav_rate"
+            android:title="Rate This App"/>
+
+        <item
+            android:id="@+id/nav_feedback"
+            android:title="FeedBack" />
+
+    </group>
+
+    <item android:title="Share">
+
+        <menu>
+
+            <item
+                android:id="@+id/nav_send"
+                android:title="Send" />
+
+        </menu>
+
+    </item>
+
+    <item android:title="About Us">
+
+        <menu>
+
+            <item
+                android:id="@+id/nav_developer"
+                android:title="Developer" />
+
+            <item
+                android:id="@+id/nav_privacy"
+                android:title="Privacy Policy" />
+
+        </menu>
+
+    </item>
+
+</menu>
